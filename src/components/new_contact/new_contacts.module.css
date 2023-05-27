@@ -11,9 +11,9 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px ;
-   
-   
+}
+.contact_item:not(:last-child) {
+    margin-bottom: 15px;
 }
 
 .contact_title {
