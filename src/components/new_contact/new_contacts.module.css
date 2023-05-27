@@ -1,0 +1,31 @@
+p {
+    margin: 0;
+}
+.contact_list {
+    list-style: circle;
+    width: 300px;
+    
+}
+
+.contact_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px ;
+   
+   
+}
+
+.contact_title {
+    font-weight: 500;
+
+    
+}
+
+.button_delete {
+    width: 50px;
+    height: 30px;
+    background-color: rgb(246, 255, 0);
+    border: 1px solid blue;
+    border-radius: 4px;
+}
