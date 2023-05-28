@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Form from './form/Form'
 import NewContact from './new_contact/NewContact'
 import Filter from './filter/Filter'
-import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid'
 
 class App extends Component {
