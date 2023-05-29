@@ -60,6 +60,7 @@ render() {
 Form.propTypes = {
   name: PropTypes.string,
   number: PropTypes.number,
+  onSubmit: PropTypes.func.isRequired,
 };
 
 export default Form;
