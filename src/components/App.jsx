@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Form from './form/Form'
-import NewContact from './new_contact/NewContact'
+import ContactList from './new_contact/ContactList'
 import Filter from './filter/Filter'
 import { nanoid } from 'nanoid'
 
@@ -32,28 +32,11 @@ formSubmitHandle = data => {
    }));
   };
 
-//   formSubmitHandle = ({ name,number}) => {
-  // const contact = {
-//       id: nanoid(),
-//       name: name,
-//       number: number,
-//     };
-
-//     console.log(contact);
-  
-//     this.setState(prevState => ({
-//       contacts: [...prevState.contacts, contact ],
-//     }))
-  
-//     console.log({ prevState });
-//     console.log(this.state.contacts)
-// };
-  
+ 
   handleFilterInputChange = (event) => {
     this.setState({
       filter: event.target.value,
     });
-    console.log(this.state.filter)
   }
   
 
@@ -82,7 +65,7 @@ formSubmitHandle = data => {
           <Filter value={this.filter} onChange={this.handleFilterInputChange} />
           {this.state.contacts.length ? (
           
-            <NewContact contacts={this.renderContacts()} onDeleteButton={this.onDeleteButton } />) : (
+            <ContactList contacts={this.renderContacts()} onDeleteButton={this.onDeleteButton } />) : (
             <p>Contact not found</p>
           )}
     </>

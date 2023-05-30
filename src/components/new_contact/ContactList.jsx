@@ -1,7 +1,7 @@
 import css from './new_contacts.module.css'
 import PropTypes from 'prop-types';
 
-const NewContact = ({ contacts, onDeleteButton }) => { 
+const ContactList = ({ contacts, onDeleteButton }) => { 
    
     return (
         <ul className={ css.contact_list}>
@@ -16,13 +16,13 @@ const NewContact = ({ contacts, onDeleteButton }) => {
 
 
 
-NewContact.propTypes = {
+ContactList.propTypes = {
     contacts: PropTypes.arrayOf(PropTypes.shape(
         {
-        id: PropTypes.any.isRequired,
-        name: PropTypes.string,
-        number: PropTypes.string,
+        id: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        number: PropTypes.string.isRequired,
     })),
     onDeleteButton: PropTypes.func.isRequired,
 } ;   
-export default NewContact;
+export default ContactList;
